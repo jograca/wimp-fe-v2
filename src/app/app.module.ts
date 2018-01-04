@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
-import { RouterModule }   from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { MatDialogModule } from '@angular/material';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +15,8 @@ import { DataService } from './data.service';
 import { DeleteConfirmComponent } from './delete-confirm/delete-confirm.component';
 import { MovieFormComponent } from './movie-form/movie-form.component';
 import { StatusMessageComponent } from './status-message/status-message.component';
+import { ActorComponent } from './actor/actor.component';
+import { ActorFormComponent } from './actor-form/actor-form.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { StatusMessageComponent } from './status-message/status-message.componen
     HomeComponent,
     DeleteConfirmComponent,
     MovieFormComponent,
-    StatusMessageComponent
+    StatusMessageComponent,
+    ActorComponent,
+    ActorFormComponent
   ],
   imports: [
     BrowserModule,
