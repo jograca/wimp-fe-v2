@@ -15,7 +15,7 @@
       <input [ngModel]="award?.id" ngModel #award_id="ngModel" type="hidden" name="id">
       
       <div class="form-group">
-        <label for="title" class="col-sm-2 control-label">First Name</label>
+        <label for="title" class="col-sm-2 control-label">Title</label>
         <div class="col-sm-10">
           <input [ngModel]="actor?.title" ngModel #title="ngModel" type="text" class="form-control" id="title" name="title" placeholder="e.g. Emmy" required minlength="2" maxlength="30">
            <span *ngIf="formErrors.title" class="text-danger">
@@ -25,7 +25,7 @@
       </div>
   
       <div class="form-group">
-        <label for="organization" class="col-sm-2 control-label">Last Name</label>
+        <label for="organization" class="col-sm-2 control-label">Organization</label>
         <div class="col-sm-10">
           <input [ngModel]="actor?.organization" ngModel #organization="ngModel" type="text" class="form-control" id="organization" name="organization" placeholder="e.g. The Academy" required minlength="2" maxlength="30">
           <span *ngIf="formErrors.organization" class="text-danger">
@@ -35,7 +35,7 @@
       </div>
   
       <div class="form-group">
-        <label for="year" class="col-sm-2 control-label">Active Since Year</label>
+        <label for="year" class="col-sm-2 control-label">Year</label>
         <div class="col-sm-10">
           <input [ngModel]="actor?.year" ngModel #year="ngModel" type="text" class="form-control" id="year" name="year" placeholder="1999" pattern="(\d{4})">
           <span *ngIf="formErrors.year" class="text-danger">

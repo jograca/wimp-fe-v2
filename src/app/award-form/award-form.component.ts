@@ -22,6 +22,8 @@ export class AwardFormComponent implements OnInit {
   successMessage: string;
   errorMessage: string;
 
+  actorId;
+
   award: object;
 
   constructor(
@@ -40,7 +42,7 @@ export class AwardFormComponent implements OnInit {
   ngOnInit() {
     this.route.params
       .subscribe((params: Params) => {
-        (+params['id']) ? this.getRecordForEdit() : null;
+        this.actorId = params['id'];
       });
   }
 
@@ -51,7 +53,7 @@ export class AwardFormComponent implements OnInit {
             award => this.successMessage = 'Record updated successfully',
             error =>  this.errorMessage = <any>error);
     }else {
-      this.dataService.addRecord('actors/1/awards', awardForm.value)
+      this.dataService.addRecord(`actors/${this.actorId}/awards`, awardForm.value)
           .subscribe(
             award => this.successMessage = 'Record added successfully',
             error =>  this.errorMessage = <any>error);
