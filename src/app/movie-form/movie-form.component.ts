@@ -1,7 +1,7 @@
 import 'rxjs/add/operator/switchMap';
-import { Component, OnInit, ViewChild }      from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Location }               from '@angular/common';
+import { Location } from '@angular/common';
 import { NgForm } from '@angular/forms';
 
 import { DataService } from '../data.service'
@@ -31,9 +31,9 @@ export class MovieFormComponent implements OnInit {
   ) {}
 
 
-  getRecordForEdit(){
+  getRecordForEdit() {
     this.route.params
-      .switchMap((params: Params) => this.dataService.getRecord("movies", +params['id']))
+      .switchMap((params: Params) => this.dataService.getRecord('movies', +params['id']))
       .subscribe(movie => this.movie = movie);
   }
 
@@ -44,16 +44,16 @@ export class MovieFormComponent implements OnInit {
       });
   }
 
-  saveMovie(movieForm: NgForm){
-    if(typeof movieForm.value.id === "number"){
-      this.dataService.editRecord("movies", movieForm.value, movieForm.value.id)
+  saveMovie(movieForm: NgForm) {
+    if (typeof movieForm.value.id === 'number') {
+      this.dataService.editRecord('movies', movieForm.value, movieForm.value.id)
           .subscribe(
-            movie => this.successMessage = "Record updated successfully",
+            movie => this.successMessage = 'Record updated successfully',
             error =>  this.errorMessage = <any>error);
-    }else{
-      this.dataService.addRecord("movies", movieForm.value)
+    }else {
+      this.dataService.addRecord('movies', movieForm.value)
           .subscribe(
-            student => this.successMessage = "Record added successfully",
+            student => this.successMessage = 'Record added successfully',
             error =>  this.errorMessage = <any>error);
             this.movie = {};
     }
