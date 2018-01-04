@@ -28,6 +28,7 @@
         <td>{{actor.activeSinceYear}}</td>
         <td class="text-center">
           <a class="btn btn-primary" [routerLink]="['/actor/edit/', actor.id]">Edit</a>&nbsp;
+          <a class="btn btn-success" [routerLink]="['/award/edit/', actor.id]">Add Award</a>&nbsp; 
           <button (click)="deleteActor(actor.id)" class="btn btn-danger">Delete</button>
         </td>
       </tr>
