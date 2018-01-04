@@ -56,6 +56,7 @@ export class AwardFormComponent implements OnInit {
             award => this.successMessage = 'Record added successfully',
             error =>  this.errorMessage = <any>error);
             this.award = {};
+            this.awardForm.form.markAsPristine();
     }
 
   }
