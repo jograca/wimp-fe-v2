@@ -33,7 +33,7 @@ export class AwardComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.dataService.deleteRecord('awards', id)
+        this.dataService.deleteRecord('actors/1/awards', id)
           .subscribe(
             award => {
               this.successMessage = 'Record(s) deleted successfully';
