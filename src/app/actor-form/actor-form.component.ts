@@ -73,7 +73,7 @@ export class ActorFormComponent implements OnInit {
   }
 
   onValueChanged() {
-    let form = this.actorForm.form;
+    const form = this.actorForm.form;
 
     for (let field in this.formErrors) {
       // clear previous error message (if any)
