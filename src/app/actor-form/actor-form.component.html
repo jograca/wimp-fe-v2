@@ -17,9 +17,9 @@
     <div class="form-group">
       <label for="firstName" class="col-sm-2 control-label">First Name</label>
       <div class="col-sm-10">
-        <input [ngModel]="actor?.firstName" ngModel #actor_firstName="ngModel" type="text" class="form-control" id="firstName" name="firstName" placeholder="e.g. Jack" required minlength="2" maxlength="30">
+        <input [ngModel]="actor?.firstName" ngModel #firstName="ngModel" type="text" class="form-control" id="firstName" name="firstName" placeholder="e.g. Jack" required minlength="2" maxlength="30">
          <span *ngIf="formErrors.firstName" class="text-danger">
-          {{ formErrors.fistName }}
+          {{ formErrors.firstName }}
         </span>
       </div>
     </div>
@@ -27,7 +27,7 @@
     <div class="form-group">
       <label for="lastName" class="col-sm-2 control-label">Last Name</label>
       <div class="col-sm-10">
-        <input [ngModel]="actor?.lastName" ngModel #actor_lastName="ngModel" type="text" class="form-control" id="lastName" name="lastName" placeholder="e.g. Black" required minlength="2" maxlength="30" >
+        <input [ngModel]="actor?.lastName" ngModel #lastName="ngModel" type="text" class="form-control" id="lastName" name="lastName" placeholder="e.g. Black" required minlength="2" maxlength="30">
         <span *ngIf="formErrors.lastName" class="text-danger">
           {{ formErrors.lastName }}
         </span>
