@@ -9,7 +9,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DataService {
 
-    private baseUrl = 'http://localhost:8080/api/'
+    // private baseUrl = 'http://localhost:8080/api/'
+    private baseUrl = 'https://wimp-app-jon-g4c-indy-nov.herokuapp.com/api/'
 
     constructor (private http: Http) {}
 
