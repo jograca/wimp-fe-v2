@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- stable
+before_script:
+- npm install
+script:
+- ng build
+deploy:
+  provider: heroku
+  api_key:
+    secure: hz3U5GJBjyX6u7aS2a89tMx2XXQAQmQa5e61gr6OLjq8i0vvCRUd3dU6COS9SZuIgyovRlAJleX4t7SULfjZkF/dc+Em72x2UuL7bW4QNP9taI36GpK4iT5MS8FwFcyDJIhKGBakESD75EmIiUVKbSremwsXsp2RMANF/ksMtjx66nZgisaxeI03DijTcn++pA4y0sPZHaUdFWwXon5vWE6DOmovnAHTd3SwuuSQjiTXoBIPATDhWxuXqk/ucYJhZQDpHBLhQRrEWz6j8LFvQUqSj4X3ZgCmTOw1V5zrw2ub+rB1dgt1y95v5KVa8T2tx8bBfEIEtlrH9mT9mpDn8WrvNwfenpA2Hm0fKUdNDOyZvICCIUmAS3uhabc4mTOiBj++qFnQDb+zgfIFtKcjZRYzNDuPF/jq+ULSR6o7KUHJNWeR0GyqgbJ8yXhZE8maH0bNKlqxKuFKU+K/ijlpkxzChPEBZ9j8PonQcwAVUsujeLaZoxRWIB0q26340vbjEEM5FhfA/xKO8Bc+c/pfbVMMLOkSrboD+NuUNYseurrgUGv8CE86QDDnaH0MIbH7BEzikj26uSKX3+f9OEoIE4W58zlVRi8FqixU/J4lOzJlfegqOK0sOegnGCckauRjBwTVTlKPd7LUCo6ABXMB75Wh2oWleVbjsS4IkqjJ+3U=
+  app: wimp-jpg
+  on:
+    repo: jograca/wimp-fe-v2
