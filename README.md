@@ -4,7 +4,7 @@ GoForCode Homework Project for January 4th
 
 Curretly works with Travis-CI Automation Depoying to Heroku (Deployment Details Below) for both Front-End and Back-End App components.
 
-In this project we created a single-page, one component Angular Front-End to interact with the WIMP APIs created in this project:
+In this project, we were provided with a starter Angular 4 App with multiple components interacting with the Movies class in the WIMP API. The assignment was to add in additional components (Actors, Awards) and to tweak the Home Page UI. 
 
 https://github.com/jograca/wimp
 
